@@ -234,16 +234,22 @@ button:focus,a:focus{
 }
 
 /* content */
-.content{
+.container.wrapper{
+    flex-direction: column;
+    gap:5rem ;
     background-color: var(--color-white);
     border-radius: var(--small-radius);
     margin-top: -5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 3rem;
+
+}
+.content{
     display: grid;
     column-gap:1rem ;
     row-gap: 4.75rem;
     grid-template-columns: 1fr;
     justify-items: center;
-    margin-bottom: 1rem;
 }
 /* post card */
 .card{
@@ -314,6 +320,11 @@ button:focus,a:focus{
     border-radius: var(--small-radius);
     font-size: 12px;
     font-family: var(--ff-roboto);
+    font-weight: var(--fw-small);
+}
+.page.active{
+    background-color: var(--color-primary);
+    color: var(--color-white);
 }
 
 .previous,.next{
@@ -321,8 +332,7 @@ button:focus,a:focus{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-
-
+    color: #9DAABF;
 }
 /* FAQ */
 .faq{
@@ -470,9 +480,9 @@ footer{
         grid-template-columns: repeat(2, auto);
     }
     /* pagination */
-    .pagination{
+    /* .pagination{
         grid-column: span 2;
-    }
+    } */
     /* contact us */
     .contact-us{
         flex-direction: row;
@@ -533,15 +543,19 @@ footer{
         padding:  6.5rem 0 25rem 0 ;
     }
     /* content */
+    .container.wrapper{
+        margin-top: -19rem;
+        gap: 10rem;
+        padding-bottom: 4rem;
+    }
     .content{
         grid-template-columns: repeat(3, auto);
-        margin-top: -19rem;
     }
   
     /* pagination */
-    .pagination{
+    /* .pagination{
         grid-column: span 3;
-    }
+    } */
     /* FAQ */
     .question{
         padding: 2.25rem 6.25rem;

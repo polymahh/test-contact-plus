@@ -73,17 +73,77 @@ let cards = posts.map((post) => {
 });
 
 console.log(cards);
-const postsRange = 9; //number of posts per page
+
+// creating previous button
+const prev = document.createElement("button");
+prev.classList.add("previous");
+prev.innerText = "Previous";
+pagesNav.append(prev);
 // creating pages buttons
 const pages = Math.ceil(cards.length / 9);
-// for(let i =0;i<=pages ;i++){
+for (let i = 1; i <= pages; i++) {
+  const btn = document.createElement("button");
+  btn.classList.add("page");
+  btn.innerText = i;
+  pagesNav.append(btn);
+}
+// creating next button
+const next = document.createElement("button");
+next.classList.add("next");
+next.innerText = "Next";
+pagesNav.append(next);
 
-// }
+const postsRange = 9; //number of posts per page
 
 const pagination = (page) => {
   const start = page * postsRange - postsRange;
-  const end = page * postsRange - 1;
+  const end = page * postsRange;
   const currentPosts = cards.slice(start, end);
+  postsContainer.innerHTML = null;
   postsContainer.append(...currentPosts);
   console.log(currentPosts);
 };
+let currentPage = 1;
+const pageBtns = document.querySelectorAll(".page");
+const prevBtns = document.querySelector(".previous");
+const nextBtns = document.querySelector(".next");
+
+const removeActiveBtn = () => {
+  pageBtns.forEach((btn) => {
+    btn.classList.remove("active");
+  });
+};
+
+const addActiveBtn = (num) => {
+  pageBtns[num - 1].classList.add("active");
+};
+
+pageBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    let num = parseInt(btn.innerText);
+    currentPage = num;
+    removeActiveBtn();
+    addActiveBtn(num);
+    pagination(num);
+  });
+});
+
+prevBtns.addEventListener("click", () => {
+  if (currentPage > 1) {
+    currentPage--;
+    removeActiveBtn();
+    addActiveBtn(currentPage);
+    pagination(currentPage);
+  }
+});
+nextBtns.addEventListener("click", () => {
+  if (currentPage < pages) {
+    currentPage++;
+    removeActiveBtn();
+    addActiveBtn(currentPage);
+    pagination(currentPage);
+  }
+});
+
+pagination(currentPage);
+addActiveBtn(currentPage);

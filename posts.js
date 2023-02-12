@@ -172,20 +172,20 @@ const posts = [
     date: "le 29-12-2022 12:08",
     preview:
       "Vivamus eget aliquam dui. Integer eu arcu vel arcu suscipit ultrices quis non mauris. Aenean scelerisque,",
-    image: "images/post7.png",
+    image: "images/post2.png",
   },
   {
     title: "Commodo sodales",
     date: "le 29-12-2022 12:08",
     preview:
       "Vivamus eget aliquam dui. Integer eu arcu vel arcu suscipit ultrices quis non mauris. Aenean scelerisque,",
-    image: "images/post8.png",
+    image: "images/post4.png",
   },
   {
     title: "Purus porta",
     date: "le 29-12-2022 12:08",
     preview:
       "Vivamus eget aliquam dui. Integer eu arcu vel arcu suscipit ultrices quis non mauris. Aenean scelerisque,",
-    image: "images/post9.png",
+    image: "images/post6.png",
   },
 ];
