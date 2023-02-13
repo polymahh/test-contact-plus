@@ -275,18 +275,18 @@ table {
 }
 
 
-@media (max-width:83em){/*Result: 1200px*/
-    .pays,.entreprise{
+@media (max-width:96em){/*Result: 1536px*/
+    .entreprise{
         display: none;
     }
     .contacts-row{
-        grid-template-columns: repeat(7,auto);
+        grid-template-columns: repeat(8,auto);
     }
-    .sub-pays,.sub-entreprise{
+    .sub-entreprise{
         display: block;
     }
     .sub-contact{
-        grid-column-end: span 7;
+        grid-column-end: span 8;
     }
 
     .show{
@@ -294,7 +294,26 @@ table {
     }
 
 }
-@media (max-width:70em){
+@media (max-width:86em){/*Result: 1376px*/
+    .pays,.entreprise,.poste{
+        display: none;
+    }
+    .contacts-row{
+        grid-template-columns: repeat(6,auto);
+    }
+    .sub-pays,.sub-entreprise,.sub-poste{
+        display: block;
+    }
+    .sub-contact{
+        grid-column-end: span 6;
+    }
+
+    .show{
+        display: block;
+    }
+
+}
+@media (max-width:70em){/*Result: 1120px*/
     .poste,.fonction{
         display: none;
     }
@@ -310,7 +329,7 @@ table {
     }
 
 }
-@media (max-width:56em){
+@media (max-width:59em){/*Result: 944px*/
     .telephone{
         display: none;
     }
@@ -328,7 +347,7 @@ table {
     }
 
 }
-@media (max-width:46em){
+@media (max-width:49em){/*Result: 736px*/
     .pseudo{
         display: none;
     }
@@ -342,7 +361,7 @@ table {
         display: block;
     }
 }
-@media (max-width:40em){
+@media (max-width:40em){/*Result: 640px*/
     .email{
         display: none;
     }
@@ -356,7 +375,7 @@ table {
         display: block;
     }
 }
-@media (max-width:27em){
+@media (max-width:27em){/*Result: 432px*/
     .sidebar{
         display: none;
     }
