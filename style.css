@@ -94,6 +94,10 @@ button:focus,a:focus{
     border-radius:var(--small-radius);
 }
 
+.button:hover{
+ filter: brightness(110%);
+}
+
 /* header */
 
 .logo{
@@ -108,6 +112,7 @@ button:focus,a:focus{
 }
 .language,.info{
     display: flex;
+    position: relative;
     align-items: center;
     gap: 0.5rem;
     font-size: var(--fs-xsmall);
@@ -132,8 +137,8 @@ button:focus,a:focus{
     display: none;
     padding: 0.5rem 1.5rem;
     position: absolute;
-    top: 45px;
-    left: 12px;
+    top: 25px;
+    left: 0px;
     background-color: var(--color-white);
     flex-direction: column;
     gap: 0.5rem;
@@ -192,7 +197,9 @@ button:focus,a:focus{
 .off-link{
     opacity:0.6
 }
-
+.nav-link:hover{
+    opacity: 1;
+}
 .nav-buttons{
     align-self: center;
 
@@ -322,7 +329,8 @@ button:focus,a:focus{
     font-family: var(--ff-roboto);
     font-weight: var(--fw-small);
 }
-.page.active{
+
+.page.active,.page:hover{
     background-color: var(--color-primary);
     color: var(--color-white);
 }
@@ -515,8 +523,7 @@ footer{
         color: var(--color-white);
     }
     .lang-list{
-        top: 34px;
-        left: 16px;
+        top: 15px;
     }
     .bottom{
         align-items: center;
