@@ -13,6 +13,7 @@
     --color-navbtn:#299CDB;
     --color-navbtn-bg:#E9F5FB;
     --color-username:#1991EB;
+    --color-tbl-border:#9DAABF;
     --color-contacts-blue:#007AD4;
     --color-contacts-green: var(--color-accent);
     --color-contacts-red:#D26175;
@@ -46,6 +47,7 @@
     margin: 0;
     padding: 0;
     font: inherit;
+    box-sizing: border-box;
   }
 
 html,
@@ -340,7 +342,7 @@ button:focus,a:focus{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    color: #9DAABF;
+    color: var(--color-tbl-border);
 }
 /* FAQ */
 .faq{
@@ -487,10 +489,7 @@ footer{
     .content{
         grid-template-columns: repeat(2, auto);
     }
-    /* pagination */
-    /* .pagination{
-        grid-column: span 2;
-    } */
+   
     /* contact us */
     .contact-us{
         flex-direction: row;

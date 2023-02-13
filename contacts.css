@@ -54,15 +54,16 @@ button.sidebar-active{
     background-color: rgb(255, 255, 255, .2);
     border-radius: var(--small-radius);
 }
-.sidebar>button>img{
-    max-width: 19px
+.sidebar>button>img,.info-icon>img{
+    max-height: 19px;
+    min-width:19px
 }
 /* contacts nav */
 .contacts{
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    width: 100%;
+    width: calc(100% - 57px - 48px);
     margin: 1rem 2rem;
     font-family: var(--ff-roboto);
 
@@ -143,27 +144,33 @@ color: var(--color-text);
     white-space: nowrap;
 }
 
+/* table of contacts */
+
 table {
     border-collapse: collapse;
-  }
-  tr{
-    border-radius: var(--small-radius);
+    border-collapse:separate;
+    border-spacing:0 15px;
   }
 
 .contacts-row{
-    display: grid;
-    gap: 0.5rem;
-    grid-template-columns:  repeat(6,2fr) 1fr 1fr 1fr;
-    background-color: var(--color-primary);
     margin-bottom:1rem;
     box-shadow: 0px 3px 3px rgba(0,0,0,0.06 );
     border-radius: var(--small-radius);
     min-width: 100%;
+    position: relative;
+    display: grid;
+    /* grid-auto-rows: auto; */
+    grid-template-columns: repeat(9,auto);
+    row-gap: 1rem;
+
 }
+
+
 
 
 .cell{
     display: flex;
+    justify-content: left;
     align-items: center;
     gap: 0.5rem;
     padding: 0.75rem 1rem;
@@ -171,14 +178,19 @@ table {
     font-weight: var(--fw-small);
     white-space: nowrap;
     text-align: left;
+    font-size: var(--fs-small);
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.06 );
+    
 
 }
-.head .cell{
+.head.cell{
+    background-color: var(--color-primary);
     color: var(--color-white);
     padding: 1.25rem 1rem;
+    font-size: var(--fs-primary);
 
 }
-.head>.cell>button{
+.head.cell>button{
     background-color: var(--color-primary);
     min-width: 11px;
 }
@@ -186,16 +198,182 @@ table {
     border: 1px solid var(--color-white);
 }
 
-.contacts-row.row{
+.cell.row {
     background-color: var(--color-white);
 }
 .name{
- border-right: 1px solid var(--color-text-light);
+    border-top-left-radius: var(--small-radius);
+    border-bottom-left-radius: var(--small-radius);
 }
-.row>.name>button{
+.actions {
+    border-top-right-radius: var(--small-radius);
+    border-bottom-right-radius: var(--small-radius);
+}
+.name{
+ border-right: 1px solid var(--color-tbl-border);
+}
+.row.cell.name{
+    font-weight: var(--fw-regular);
+    color: var(--color-username);
+}
+.row.cell.pseudo{
+    font-weight: var(--fw-regular);
+}
+
+.row.cell.email,.row.cell.telephone{
+    font-weight: var(--fw-regular);
+    color: var(--color-primary);
+}
+.name>button{
     border-radius: 50%;
     overflow: hidden;
     min-width: 40px;
     max-height: 40px;
 }
 
+.action>img{
+    min-width:15px;
+    max-height:15px
+}
+
+.show>img{
+    width: 16px;
+    height: 16px;
+    filter: invert(41%) sepia(22%) saturate(1077%) hue-rotate(201deg) brightness(95%) contrast(87%);
+}
+.show{
+    display: none;
+    background: none;
+    flex-grow: 1;
+}
+
+.sub-contact{
+    /* position: absolute; */
+    background-color: var(--color-white);
+    top: 65px;
+    left: 0;
+    grid-column-start: 1;
+    grid-column-end: span 9;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    padding: 1rem;
+    margin-top: -0.9rem;
+    font-family: var(--ff-roboto);
+    font-weight: var(--fw-regular);
+    text-align: left;
+    font-size: var(--fs-small);
+    transition: all 0.4s ease-in-out;
+    z-index: 10;
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.06 );
+    border-radius: var(--small-radius);
+}
+
+.sub{
+    display: none;
+}
+
+.sub>.title{
+    color: var(--color-primary);
+}
+
+
+@media (max-width:83em){/*Result: 1200px*/
+    .pays,.entreprise{
+        display: none;
+    }
+    .contacts-row{
+        grid-template-columns: repeat(7,auto);
+    }
+    .sub-pays,.sub-entreprise{
+        display: block;
+    }
+    .sub-contact{
+        grid-column-end: span 7;
+    }
+
+    .show{
+        display: block;
+    }
+
+}
+@media (max-width:70em){
+    .poste,.fonction{
+        display: none;
+    }
+    .contacts-row{
+        grid-template-columns: repeat(5,auto);
+    }
+    .sub-contact{
+        grid-column-end: span 5;
+        justify-content: left;
+    }
+    .sub-pays,.sub-poste,.sub-fonction,.sub-entreprise{
+        display: block;
+    }
+
+}
+@media (max-width:56em){
+    .telephone{
+        display: none;
+    }
+    .contacts-row{
+        grid-template-columns: repeat(4,auto);
+    }
+    .sub-contact{
+        grid-column-end: span 4;
+    }
+    .sub-telephone{
+        display: block;
+    }
+    .contacts-nav>nav{
+        display: none;
+    }
+
+}
+@media (max-width:46em){
+    .pseudo{
+        display: none;
+    }
+    .contacts-row{
+        grid-template-columns: repeat(3,auto);
+    }
+    .sub-contact{
+        grid-column-end: span 3;
+    }
+    .sub-pseudo{
+        display: block;
+    }
+}
+@media (max-width:40em){
+    .email{
+        display: none;
+    }
+    .contacts-row{
+        grid-template-columns: repeat(2,auto);
+    }
+    .sub-contact{
+        grid-column-end: span 2;
+    }
+    .sub-email{
+        display: block;
+    }
+}
+@media (max-width:27em){
+    .sidebar{
+        display: none;
+    }
+    .home{
+        display: none;
+    }
+    .apps{
+        display: none;
+    }
+    .contacts{
+        width: 100%;
+        margin: 1rem 0;
+}
+
+
+}

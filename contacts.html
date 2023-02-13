@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="contacts.css">
-    <script src="script.js"></script>
+    <script src="contact.js" defer></script>
 </head>
 <body>
     <header class="contacts-header">
@@ -58,74 +58,170 @@
                 </nav>
 
             </div>
-            <div class="contacts-row head">
-                <div class="cell name">
+            <div class="contacts-row ">
+                <div class="cell head name ">
                     <input type="checkbox" name="" id="">
                     <span>Name</span>
                     <button><img src="images/contacts/sort.svg" alt=""></button>
                 </div>
-                <div class="cell pseudo">
+                <div class="cell head pseudo ">
                     <span>Pseudo</span>
                     <button><img src="images/contacts/sort.svg" alt=""></button>
                 </div>
-                <div class="cell email">
+                <div class="cell head email ">
                     <span>E-mail</span>
                     <button><img src="images/contacts/sort.svg" alt=""></button>
                 </div>
-                <div class="cell telephone">
+                <div class="cell head telephone ">
                     <span>Téléphone</span>
                     <button><img src="images/contacts/sort.svg" alt=""></button>
                 </div>
-                <div class="cell entreprise">
+                <div class="cell head entreprise ">
                     <span>Entreprise</span>
                     <button><img src="images/contacts/sort.svg" alt=""></button>
                 </div>
-                <div class="cell fonction">
+                <div class="cell head fonction ">
                     <span>Fonction</span>
                     <button><img src="images/contacts/sort.svg" alt=""></button>
                 </div>
-                <div class="cell poste">
+                <div class="cell head poste ">
                     <span>Poste</span>
                     <button><img src="images/contacts/sort.svg" alt=""></button>
                 </div>
-                <div class="cell pays">
+                <div class="cell head pays ">
                     <span>pays</span>
                     <button><img src="images/contacts/sort.svg" alt=""></button>
                 </div>
-                <div class="cell actions">
+                <div class="cell head actions">
                     <span>actions</span>
                 </div>
-
-            </div>
-            <div class="contacts-row row">
-                <div class="cell name">
+                <!-- rows -->
+                <div class="cell row name">
                     <input type="checkbox" name="" id="">
                     <button><img src="images/contacts/avatars/cn.png" alt=""></button>
                     <span>Contact Name</span>
                 </div>
-                <div class="cell pseudo">
+                <div class="cell row pseudo">
                     <span>Pseudo name</span>
                 </div>
-                <div class="cell email">
+                <div class="cell row email">
                     <span>E-mailexample@gmail.com</span>
                 </div>
-                <div class="cell telephone">
+                <div class="cell row telephone">
                     <span>+212 600 00 00 00</span>
                 </div>
-                <div class="cell entreprise">
+                <div class="cell row entreprise">
                     <span>Company name</span>
                 </div>
-                <div class="cell fonction">
+                <div class="cell row fonction">
                     <span>Fonction name</span>
                 </div>
-                <div class="cell poste">
+                <div class="cell row poste">
                     <span>poste name</span>
                 </div>
-                <div class="cell pays">
+                <div class="cell row pays">
                     <span>maroc</span>
                 </div>
-                <div class="cell actions">
-                    <span>actions</span>
+                <div class="cell row actions">
+                    <Button class="action group"><img src="images/contacts/group.svg" alt=""></Button>
+                    <Button class="action edit"><img src="images/contacts/edit.svg" alt=""></Button>
+                    <Button class="action delete"><img src="images/contacts/delete.svg" alt=""></Button>
+                    <Button class="action msg"><img src="images/contacts/msg.svg" alt=""></Button>
+                    <Button class="action show more"><img src="images/contacts/arrow-dropdown.svg" alt=""></Button>
+                </div>
+                <div class="sub-contact">
+                    <div class="sub sub-pseudo">
+                        <span class="title">Pseudo:</span>
+                        <span>Pseudo name</span>
+                    </div>
+                    <div  class="sub sub-email">
+                        <span class="title">E-mail:</span>
+                        <span>E-mailexample@gmail.com</span>
+                    </div>
+                    <div  class="sub sub-telephone">
+                        <span class="title">Téléphone:</span>
+                        <span>+212 600 00 00 00</span>
+                    </div>
+                    <div  class="sub sub-entreprise">
+                        <span class="title">Entreprise:</span>
+                        <span>Company name</span>
+                    </div>
+                    <div  class="sub sub-fonction">
+                        <span class="title">Fonction:</span>
+                        <span>Fonction name</span>
+                    </div>
+                    <div  class="sub sub-poste">
+                        <span class="title">Poste:</span>
+                        <span>poste name</span>
+                    </div>
+                    <div  class="sub sub-pays">
+                        <span class="title">pays:</span>
+                        <span>maroc</span>
+                    </div>
+                </div>
+                <!-- rows -->
+                <div class="cell row name">
+                    <input type="checkbox" name="" id="">
+                    <button><img src="images/contacts/avatars/cn.png" alt=""></button>
+                    <span>Contact Name</span>
+                </div>
+                <div class="cell row pseudo">
+                    <span>Pseudo name</span>
+                </div>
+                <div class="cell row email">
+                    <span>E-mailexample@gmail.com</span>
+                </div>
+                <div class="cell row telephone">
+                    <span>+212 600 00 00 00</span>
+                </div>
+                <div class="cell row entreprise">
+                    <span>Company name</span>
+                </div>
+                <div class="cell row fonction">
+                    <span>Fonction name</span>
+                </div>
+                <div class="cell row poste">
+                    <span>poste name</span>
+                </div>
+                <div class="cell row pays">
+                    <span>maroc</span>
+                </div>
+                <div class="cell row actions">
+                    <Button class="action group"><img src="images/contacts/group.svg" alt=""></Button>
+                    <Button class="action edit"><img src="images/contacts/edit.svg" alt=""></Button>
+                    <Button class="action delete"><img src="images/contacts/delete.svg" alt=""></Button>
+                    <Button class="action msg"><img src="images/contacts/msg.svg" alt=""></Button>
+                    <Button class="action show more"><img src="images/contacts/arrow-dropdown.svg" alt=""></Button>
+                </div>
+                <div class="sub-contact">
+                    <div class="sub sub-pseudo">
+                        <span class="title">Pseudo:</span>
+                        <span>Pseudo name</span>
+                    </div>
+                    <div  class="sub sub-email">
+                        <span class="title">E-mail:</span>
+                        <span>E-mailexample@gmail.com</span>
+                    </div>
+                    <div  class="sub sub-telephone">
+                        <span class="title">Téléphone:</span>
+                        <span>+212 600 00 00 00</span>
+                    </div>
+                    <div  class="sub sub-entreprise">
+                        <span class="title">Entreprise:</span>
+                        <span>Company name</span>
+                    </div>
+                    <div  class="sub sub-fonction">
+                        <span class="title">Fonction:</span>
+                        <span>Fonction name</span>
+                    </div>
+                    <div  class="sub sub-poste">
+                        <span class="title">Poste:</span>
+                        <span>poste name</span>
+                    </div>
+                    <div  class="sub sub-pays">
+                        <span class="title">pays:</span>
+                        <span>maroc</span>
+                    </div>
                 </div>
 
             </div>
