@@ -293,6 +293,7 @@ button:focus,a:focus{
     display: inline-block;
     background:url(images/clock.svg);
     background-size: contain;
+    background-repeat: no-repeat;
     width: 13px;
     height: 13px;
 }
@@ -392,7 +393,7 @@ button:focus,a:focus{
     margin-top: -1rem;
     background-color: white;
     overflow: hidden;
-    max-width: 730px;
+    max-width: 622px;
     max-height: 0;
     transition: all 0.3s ease-in-out;
   }
@@ -558,14 +559,15 @@ footer{
         grid-template-columns: repeat(3, auto);
     }
   
-    /* pagination */
-    /* .pagination{
-        grid-column: span 3;
-    } */
+    
     /* FAQ */
     .question{
         padding: 2.25rem 6.25rem;
     }
+    .panel {
+        max-width: 772px;
+      
+      }
     /* contact us */
     .contact-us{
         flex-direction: row;

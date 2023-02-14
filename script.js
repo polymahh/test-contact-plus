@@ -38,7 +38,7 @@ questions.forEach((question) => {
       panel.style.padding = `0 18px`;
       question.childNodes[0].classList.remove("active");
     } else {
-      panel.style.maxHeight = `${panel.scrollHeight}px`;
+      panel.style.maxHeight = `${panel.scrollHeight + 32}px`;
       panel.style.padding = `1rem 18px`;
       question.childNodes[0].classList.add("active");
     }
