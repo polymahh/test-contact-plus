@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="contacts.css">
     <script src="users.js" ></script>
     <script src="contact.js" defer></script>
@@ -19,12 +19,32 @@
             <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
         </div>
         <nav class="util-nav">
-            <button class="upgrade"></button>
+            <button class="upgrade">
+                <div>
+                    <p>Upgrade to</p>
+                    <span>PRO</span>
+                    <img src="images/contacts/up-arrow.png" alt="">
+                </div>
+                <img class="crown" src="images/contacts/crown-solid.png" alt="">
+            </button>
             <button class="home"><img src="images/contacts/home.svg" alt=""></button>
-            <button class="apps"><img src="images/contacts/apps.svg" alt=""></button>
+            <button class="apps"><img src="images/contacts/apps.png" alt=""></button>
             <div class="user">
                 <img src="images/contacts/arrow-dropdown.svg" alt="">
                 <button><img src="images/contacts/profile (1).png" alt=""></button>
+            </div>
+            <div class="user-menu">
+                <span>user info</span>
+                <button class="home"><img src="images/contacts/home.svg" alt=""> </button>
+                <button class="apps"><img src="images/contacts/apps.png" alt=""></button>
+                <button class="upgrade">
+                    <div>
+                        <p>Upgrade to</p>
+                        <span>PRO</span>
+                        <img src="images/contacts/up-arrow.png" alt="">
+                    </div>
+                    <img class="crown" src="images/contacts/crown-solid.png" alt="">
+                </button>
             </div>
         </nav>
         
@@ -41,11 +61,9 @@
                 <div class="list-info">
                     <h3>liste mees contacts</h3>
                     <div class="breadcrumbs">
-                        <a class="lnk ">Home</a>
-                        <span class="left-arrow"></span>
-                        <a class="lnk ">IMP DEMO</a>
-                        <span class="left-arrow"></span>
-                        <a class="lnk active">Contacts</a>
+                        <a href="#" class="lnk ">Home</a>
+                        <a href="#" class="lnk ">IMP DEMO</a>
+                        <a href="#" class="lnk-active">Contacts</a>
                     </div>
                 </div>
                 <nav>
@@ -57,21 +75,33 @@
                     <button class="nav-btn copy"><img src="images/contacts/file.svg" alt=""></button>
                     <button class="add-contacts">+  Add contacts</button>
                 </nav>
+                <div class="nav-menu">
+                    <button><img src="images/" alt=""></button>
+                    <div class="drop-menu">
+                        <button class="nav-btn list"><img src="images/contacts/list.svg" alt=""></button>
+                        <button class="nav-btn app active"><img src="images/contacts/square.svg" alt=""></button>
+                        <button class="nav-btn at"><img src="images/contacts/at.svg" alt=""></button>
+                        <button class="nav-btn phone"><img src="images/contacts/phone.svg" alt=""></button>
+                        <button class="nav-btn search"><img src="images/contacts/search.svg" alt=""></button>
+                        <button class="nav-btn copy"><img src="images/contacts/file.svg" alt=""></button>
+                        <button class="add-contacts">+  Add contacts</button>
+                    </div>
+                </div>
 
             </div>
             <div class="contacts-row ">
                 <div class="cell head name ">
                     <input type="checkbox" name="" id="">
                     <span>Name</span>
-                    <button><img src="images/contacts/sort.svg" alt=""></button>
+                    <button class="sort-name"><img src="images/contacts/sort.svg" alt=""></button>
                 </div>
                 <div class="cell head pseudo ">
                     <span>Pseudo</span>
-                    <button><img src="images/contacts/sort.svg" alt=""></button>
+                    <button class="sort-pseudo"><img src="images/contacts/sort.svg" alt=""></button>
                 </div>
                 <div class="cell head email ">
                     <span>E-mail</span>
-                    <button><img src="images/contacts/sort.svg" alt=""></button>
+                    <button class="sort-email"><img src="images/contacts/sort.svg" alt=""></button>
                 </div>
                 <div class="cell head telephone ">
                     <span>Téléphone</span>
@@ -79,30 +109,39 @@
                 </div>
                 <div class="cell head entreprise ">
                     <span>Entreprise</span>
-                    <button><img src="images/contacts/sort.svg" alt=""></button>
+                    <button class="sort-entreprise"><img src="images/contacts/sort.svg" alt=""></button>
                 </div>
                 <div class="cell head fonction ">
                     <span>Fonction</span>
-                    <button><img src="images/contacts/sort.svg" alt=""></button>
+                    <button class="sort-fonction"><img src="images/contacts/sort.svg" alt=""></button>
                 </div>
                 <div class="cell head poste ">
                     <span>Poste</span>
-                    <button><img src="images/contacts/sort.svg" alt=""></button>
+                    <button class="sort-poste"><img src="images/contacts/sort.svg" alt=""></button>
                 </div>
                 <div class="cell head pays ">
-                    <span>pays</span>
-                    <button><img src="images/contacts/sort.svg" alt=""></button>
+                    <span>Pays</span>
+                    <button class="sort-pays"><img src="images/contacts/sort.svg" alt=""></button>
                 </div>
                 <div class="cell head actions">
                     <span>actions</span>
                 </div>
-                <!-- rows -->
-                
-                
+                <!-- rows -->                
 
             </div>
-            <div>
+            <div class="pagination-contacts">
+                <div class="page-info">
+                    <button >134</button>
+                    <span>N° Contacts :</span>
+                </div>
+                <div class="pagination">
+
+                </div>
                 
+            </div>
+            <div class="footer">
+                
+
             </div>
             
 
