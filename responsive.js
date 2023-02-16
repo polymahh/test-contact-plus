@@ -16,24 +16,10 @@ const tableContainer = document.querySelector(".contacts");
 const table = document.querySelector(".contacts-rows");
 console.log(tableContainer.offsetWidth, table.offsetWidth);
 
-window.addEventListener("resize", () => {
+const observer = new ResizeObserver((entries) => {
   checkResponsivness();
 });
-// const observer = new ResizeObserver((entries) => {
-//   console.log(entries);
-//   let tableWidth = Math.ceil(entries[0].contentRect.width);
-//   let tabelContainerWidth = Math.ceil(entries[1].contentRect.width);
-
-//   if (tableWidth > tabelContainerWidth) {
-//     checkResponsivness();
-//   }
-//   if (tabelContainerWidth > tableWidth + 300) {
-//     addColumns();
-//   }
-// });
-
-// observer.observe(table);
-// observer.observe(tableContainer);
+observer.observe(tableContainer);
 
 const checkResponsivness = () => {
   if (table.offsetWidth > tableContainer.offsetWidth) {
@@ -46,19 +32,18 @@ const checkResponsivness = () => {
 
 let addColumns = () => {
   let girdColumns = cssRootValues.getPropertyValue("--grid-columns");
-
+  if (girdColumns >= tableHeaders.length) return;
   if (girdColumns < tableHeaders.length - 1) {
-    cssRoot.style.setProperty("--grid-columns", girdColumns + 1);
+    cssRoot.style.setProperty("--grid-columns", ++girdColumns);
     showItems(tableHeaders[girdColumns - 1]);
   }
-  checkResponsivness();
 };
 
 let removeColumns = () => {
   let girdColumns = cssRootValues.getPropertyValue("--grid-columns");
 
   let newgrid = girdColumns - 1;
-  console.log(girdColumns, newgrid);
+  // console.log(girdColumns, newgrid);
   if (newgrid <= 1) return;
   if (newgrid <= 8) {
     rowDropButton();
@@ -72,12 +57,10 @@ let removeColumns = () => {
 
 const hideItems = (className) => {
   const subClass = `.sub-${className?.substr(1)}`;
-  console.log(subClass);
   const elementsWithClass = document.querySelectorAll(className);
   const subElementWithClass = subClass
     ? document.querySelectorAll(subClass)
     : [];
-  console.log(subElementWithClass);
   for (let i = 0; i < elementsWithClass.length; i++) {
     elementsWithClass[i].style.display = "none";
   }
