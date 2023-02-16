@@ -5,7 +5,7 @@ userMenuBtn.addEventListener("click", () => {
   userMenu.classList.toggle("open");
 });
 // contact rows
-const cotactContainner = document.querySelector(".contacts-row");
+const cotactContainner = document.querySelector(".contacts-rows");
 let addUser = (user) => {
   const name = document.createElement("div");
   name.classList.add("cell", "row", "name");

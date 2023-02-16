@@ -39,6 +39,9 @@
     --small-radius:5px;
     --regular-radius:10px;
     --pill-radius:999em 999em;
+
+    /* grid rows */
+    --grid-columns : 9;
 }
 
 /* mobile first */
@@ -295,14 +298,14 @@ color: var(--color-text) ;
 
 /* table of contacts */
 
-.contacts-row{
+.contacts-rows{
     margin-bottom:1rem;
     box-shadow: 0px 3px 3px rgba(0,0,0,0.06 );
     border-radius: var(--small-radius);
     min-width: 100%;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(9,auto);
+    grid-template-columns: repeat(var(--grid-columns),auto);
     row-gap: 1rem;
 }
 
@@ -410,7 +413,7 @@ color: var(--color-text) ;
     top: 65px;
     left: 0;
     grid-column-start: 1;
-    grid-column-end: span 9;
+    grid-column-end: span var(--grid-columns);
     display: none;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -507,15 +510,13 @@ color: var(--color-text) ;
     .entreprise{
         display: none;
     }
-    .contacts-row{
-        grid-template-columns: repeat(8,auto);
+    .contacts-rows{
+        --grid-columns:8
     }
     .sub-entreprise{
         display: block;
     }
-    .sub-contact{
-        grid-column-end: span 8;
-    }
+    
 
     .show{
         display: block;
@@ -526,16 +527,13 @@ color: var(--color-text) ;
     .pays,.poste{
         display: none;
     }
-    .contacts-row{
-        grid-template-columns: repeat(6,auto);
+    .contacts-rows{
+        --grid-columns:6;
     }
     .sub-pays,.sub-entreprise,.sub-poste{
         display: block;
     }
-    .sub-contact{
-        grid-column-end: span 6;
-    }
-
+   
     .show{
         display: block;
     }
@@ -545,11 +543,10 @@ color: var(--color-text) ;
     .poste,.fonction{
         display: none;
     }
-    .contacts-row{
-        grid-template-columns: repeat(5,auto);
+    .contacts-rows{
+        --grid-columns:5;
     }
     .sub-contact{
-        grid-column-end: span 5;
         justify-content: left;
     }
     .sub-pays,.sub-poste,.sub-fonction,.sub-entreprise{
@@ -561,12 +558,10 @@ color: var(--color-text) ;
     .telephone{
         display: none;
     }
-    .contacts-row{
-        grid-template-columns: repeat(4,auto);
+    .contacts-rows{
+        --grid-columns:4;
     }
-    .sub-contact{
-        grid-column-end: span 4;
-    }
+   
     .sub-telephone{
         display: block;
     }
@@ -578,12 +573,10 @@ color: var(--color-text) ;
     .pseudo{
         display: none;
     }
-    .contacts-row{
-        grid-template-columns: repeat(3,auto);
+    .contacts-rows{
+        --grid-columns:3;
     }
-    .sub-contact{
-        grid-column-end: span 3;
-    }
+    
     .sub-pseudo{
         display: block;
     }
@@ -601,12 +594,10 @@ color: var(--color-text) ;
     .email{
         display: none;
     }
-    .contacts-row{
-        grid-template-columns: repeat(2,auto);
+    .contacts-rows{
+        --grid-columns:2;
     }
-    .sub-contact{
-        grid-column-end: span 2;
-    }
+    
     .sub-email{
         display: block;
     }
@@ -620,6 +611,10 @@ color: var(--color-text) ;
     }
     .contacts-header{
         padding: 8px 10px 10px 8px;
+    }
+
+    .contacts-nav,.name,.actions,.sub-contact{
+        border-radius: 0px;
     }
     
     .contacts{

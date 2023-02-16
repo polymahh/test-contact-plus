@@ -3,7 +3,7 @@ const users = [
     image: "images/contacts/avatars/cn.png",
     name: "Contact Name",
     pseudo: "Pseudo name",
-    email: "E-mailexample@gmail.com",
+    email: "E-mailexample@gmail.comdfdfdfdfdfdfdf",
     phone: "+212 600 00 00 00",
     entreprise: "Company name",
     fonction: "Fonction name",
